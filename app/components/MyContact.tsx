@@ -52,11 +52,11 @@ const MyContact = () => {
             }}>
             <div className="flex flex-col mb-4">
               <label htmlFor="email" className="mb-2">Email:</label>
-              <input type="email" id="email" name="email" className="border-black border-solid border-2 rounded-lg pl-2 h-10" placeholder="email" required maxLength={500}/>
+              <input type="email" id="email" name="email" className="border-black border-solid border-2 rounded-lg pl-2 h-10" placeholder="email" required maxLength={500} autoComplete="email"/>
             </div>
             <div className="flex flex-col mb-4">
               <label htmlFor="message" className="mb-2">Message:</label>
-              <textarea id="message" name="message" className="border-black border-solid border-2 rounded-lg pl-2 h-20" style={{ resize: "none" }} placeholder="Input message" required  maxLength={5000} />
+              <textarea id="message" name="message" className="border-black border-solid border-2 rounded-lg pl-2 h-20" style={{ resize: "none" }} placeholder="Input message" required  maxLength={5000}  autoComplete="off"/>
             </div>
             <SubmitBtn/>
         
