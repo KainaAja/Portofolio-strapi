@@ -4,7 +4,7 @@ import Introduction from "./components/Introduction";
 import AboutMe from "./components/AboutMe";
 import Project from "./components/Project";
 import MyContact from "./components/MyContact";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Home() {
 

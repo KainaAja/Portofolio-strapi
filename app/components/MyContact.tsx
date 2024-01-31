@@ -6,7 +6,7 @@ import { FaDiscord } from "react-icons/fa";
 import Link from "next/link";
 import {sendEmail} from "@/actions/sendEmail";
 import SubmitBtn from "./submit-btn";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 const MyContact = () => {
 

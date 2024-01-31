@@ -31,7 +31,7 @@ const introduction = () => {
         {/* Text column on the right */}
         <div className="col-span-7 place-self-center pt-12 pl-0 lg:pl-10 ">
           <span className="text-white font-extrabold mb-4 text-tranparent bg-clip-text text-3xl 2xl:text-4xl ">
-            Hai, I'm {""}
+            Hai, Im {""}
           </span>
           <h1 className="text-white mb-2 text-lg font-extrabold">
             <TypeAnimation
