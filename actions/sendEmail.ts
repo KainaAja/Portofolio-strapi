@@ -5,9 +5,6 @@ import { Resend } from "resend";
 import { validateString, getErrorMessage } from '@/lib/utils';
 import ContactFormEmail from "@/email/Contact-form-email";
 
-export const runtime ='edge';
-export const dynamic = 'force-dynamic';
-
 const resend = new Resend(process.env.RESEND_API_KEY);
   
 export const sendEmail = async (formData : FormData) => {
