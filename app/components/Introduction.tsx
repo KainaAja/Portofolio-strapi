@@ -14,15 +14,15 @@ const introduction = () => {
       <div className="grid grid-cols-1 lg:grid-cols-11 px-20 lg:px-[105px] 2xl:px-[170px] pt-36 lg:pt-32 2xl:pt-[100px] pb-10">
         {/* Image column on the left */}
         <div className="col-span-4 place-self-center lg:mt-0">
-          <div  className="w-[370px] xl:w-[500px] h-[370px] xl:h-[500px] relative" >
+          <div  className="w-[370px] xl:w-[400px] h-[370px] xl:h-[400px] relative" >
           
 
             <Image
               src="/images/profile.png"
               alt="profile"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               
             />
           </div>
