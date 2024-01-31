@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    scroll-behavior:smooth !important;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #171717;
+}
+main{
+    background: #171717;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px; z-index: 10; 
+}
+.container {
+    width: 100%;
+}
+
+.text-xl {
+    font-size: 1.5rem; /* Adjust accordingly */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bg_project{
+    background: #EDEDED;
+}
+
+footer{
+    background: #444444;
+}
+
+.wave,
+.wave-opacity,
+.wave-footer {
+  width: 100%;
+}
+
+.grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 137px;
+    transform: rotateY(180deg);
+}
+
+.wave .shape-fill {
+    fill: #444444;
+}
+
+.wave-opacity {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.wave-opacity svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+    transform: rotateY(180deg);
+}
+
+.wave-opacity .shape-fill {
+    fill: #444444;
+}
+
+.wave-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+}
+
+.wave-footer svg {
+    position: relative;
+    display: block;
+    width: calc(209% + 1.3px);
+    height: 265px;
+}
+
+.wave-footer .shape-fill {
+    fill: #171717;
+}
