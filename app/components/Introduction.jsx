@@ -9,8 +9,11 @@ const  Introduction = () => {
   const [introduction, setIntroduction] = useState(null);
 
   useEffect(() => {
+    const headers = {
+      Authorization: `Bearer 5bd6d295870f2b6c4158d55512fefb01705534b01aa97e16aa24b51d64f2f5bdb6447cd2b78ba371444a7f843572d250705b38dd0bcc85b82efd9f7a08c70101525e4cc61ce331987290ef8d52c17cc41721b303aaa56e9f418bf20ea5eb6f34c3aceec263539c8c56fa21e0c3d3da8e69c53684a1e265e7652627a4b5c08511`
+    }
     axios
-      .get("http://127.0.0.1:1337/api/introduction?populate=*")
+      .get("http://127.0.0.1:1337/api/introduction?populate=*", {headers})
       .then(response => {
         setIntroduction(response.data.data.attributes);
       })
@@ -18,6 +21,7 @@ const  Introduction = () => {
         setError(error);
       });
   }, []);
+  
 
   if (error) {
     return <div>An error occurred: {error.message}</div>;
