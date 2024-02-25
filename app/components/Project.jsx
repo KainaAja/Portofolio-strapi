@@ -40,7 +40,7 @@ const Project = () => {
                             <div className="bg-[#adadad] flex-[1 1 30px] p-[16px] rounded-[.5rem] divide-solid relative mt-[3rem] focus:scale-1000 hover:scale-105">
                                 <div className="relative text-center pt-2rem overflow-hidden">
                                     
-                                <Image
+                                <img
                                         src={
                                             index === 0
                                                 ? 'http://localhost:1337/uploads/project1_9eb0419414.png'
