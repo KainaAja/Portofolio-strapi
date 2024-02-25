@@ -40,18 +40,19 @@ const Project = () => {
                             <div className="bg-[#adadad] flex-[1 1 30px] p-[16px] rounded-[.5rem] divide-solid relative mt-[3rem] focus:scale-1000 hover:scale-105">
                                 <div className="relative text-center pt-2rem overflow-hidden">
                                     
-                                    <Image
+                                <Image
                                         src={
                                             index === 0
-                                              ? 'http://localhost:1337/uploads/project1_9eb0419414.png'
-                                              : index === 1
-                                              ? 'http://localhost:1337/uploads/project3_34ba8b3a85.png'
-                                              : 'http://localhost:1337/uploads/project2_647be56fa7.png'
-                                          }
-                                          alt={`Project Image ${index + 1}`}
+                                                ? 'http://localhost:1337/uploads/project1_9eb0419414.png'
+                                                : index === 1
+                                                ? 'http://localhost:1337/uploads/project3_34ba8b3a85.png'
+                                                : 'http://localhost:1337/uploads/project2_647be56fa7.png'
+                                        }
+                                        alt={`Project Image ${index + 1}`}
                                         width={400}
                                         height={400}
                                     />
+
                                     
                                     <div className="description text-center">
                                         <h3 className="text-xl font-extrabold pt-3">{attributes.title}</h3>
