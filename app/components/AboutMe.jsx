@@ -1,7 +1,8 @@
 "use client";
-import React, {useState, useTransition} from "react";  
 import { BsChevronCompactLeft,BsChevronCompactRight } from "react-icons/bs";
 import TabButton from "./TabButton";
+import axios from "axios";
+import { useEffect, useState, useTransition } from "react";
 
 
 const TAB_DATA = [
@@ -46,19 +47,49 @@ const TAB_DATA = [
 
 const AboutMe = () => {
 
+    const [error, setError] = useState(null);
+    const [about, setAbout] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [tab, setTab] = useState("Skills"); 
+    const [isPending ,startTransition] = useTransition();
+
+    useEffect(() => {
+        axios
+        .get("http://127.0.0.1:1337/api/about")
+        .then(response => {
+            setAbout(response.data.data.attributes);
+        })
+        .catch(error => {
+            setError(error);
+        });
+    }, []);
+
+    if (error) {
+        return <div>An error occurred: {error.message}</div>;
+    }
+
+    if (!about) {
+        return <div>Loading...</div>;
+    }
+
+
+
+
     const slides = [
     {
-      url: '/images/foto1.jpg'  
+      url: 'http://localhost:1337/uploads/foto1_b137cfca71.jpg'  
     },
     {
-        url: '/images/foto2.jpg'  
+        url: 'http://localhost:1337/uploads/foto2_e695252488.jpg'  
       },
       {
-        url: '/images/foto3.jpg'  
+        url: 'http://localhost:1337/uploads/foto3_9642b147ac.jpg'  
       },
     ];
 
-    const [currentIndex, setCurrentIndex] = useState(0)
+    
+
+   
 
     const prevSlide = () =>{
         const isFirstSlide = currentIndex === 0;
@@ -72,32 +103,24 @@ const AboutMe = () => {
         setCurrentIndex(newIndex);
     };
 
-    const [tab, setTab] = useState("Skills"); 
-    const [isPending ,startTransition] = useTransition();
+    
 
-    const handleTabChange = (id: string) => {
-        startTransition(() => {
+    const handleTabChange = (id) => {      
             setTab(id);
-        });
     };
     const selectedTab = TAB_DATA.find((t) => t.id === tab);
 
     return (
+        <>
+        
         <section id="about" >
             <div className="grid grid-cols-1 lg:grid-cols-12 px-20 lg:px-[105px] 2xl:px-[170px] pt-[64px] 2xl:mt-[85px]">
                 <div className="col-span-6 place-self-center ">
                     <h1 className="text-white font-extrabold mb-4 text-tranparent bg-clip-text text-3xl 2xl:text-4xl ml-auto">
-                        About me
+                        {about.title}
                     </h1>
                     <p className="text-[#c2c5c7] text-lg mb-6 lg:text-xl 2xl:text-2xl">
-                    From my education at SMK IT GLOBAL BALI
-                       DENPASAR I got knowledge
-                       knowledge about Engineering majors
-                       Software, I want to go into more depth
-                       Website creation, back end part of the website
-                       development and curiosity
-                       how does it work on the back end.
-
+                        {about.desc}
                     </p>
                     <div className="flex flex-row ">
                         <TabButton
@@ -146,7 +169,10 @@ const AboutMe = () => {
                 </svg>
             </div>
         </section>
+       
+        </>
     );
+    
 };
 
 export default AboutMe;

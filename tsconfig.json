@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/send/route.ts", "app/components/MyContact.tsx", "actions/handleScroll.ts", "app/navbar/Navbar.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/send/route.ts", "app/components/MyContact.tsx", "actions/handleScroll.ts", "app/navbar/Navbar.jsx", "app/components/Introduction.jsx", "app/page.jsx", "lib/utils.ts", "app/components/AboutMe.jsx", "app/components/Project.jsx"],
   "exclude": ["node_modules"]
 }
