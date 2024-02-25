@@ -36,7 +36,7 @@ const Project = () => {
                 <h2 className="text-xl font-extrabold text-center bg-[#EDEDED] border-2 border-black p-3 rounded-3xl">My Project</h2>
                 <div className="flex flex-wrap gap-x-[6rem] xl:gap-x-[65px] gap-y-[1rem] xl:gap-y-[0px] pb-6 content-center justify-center items-center">
                     {project.map(({ id, attributes }, index) => (
-                        <div className="project-item w-[300px] md:w-[400px]" >
+                        <div key={id} className="project-item w-[300px] md:w-[400px]" >
                             <div className="bg-[#adadad] flex-[1 1 30px] p-[16px] rounded-[.5rem] divide-solid relative mt-[3rem] focus:scale-1000 hover:scale-105">
                                 <div className="relative text-center pt-2rem overflow-hidden">
                                     
