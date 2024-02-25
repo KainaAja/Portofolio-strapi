@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Project = () => {
     const [error, setError] = useState(null);
@@ -39,7 +40,7 @@ const Project = () => {
                             <div className="bg-[#adadad] flex-[1 1 30px] p-[16px] rounded-[.5rem] divide-solid relative mt-[3rem] focus:scale-1000 hover:scale-105">
                                 <div className="relative text-center pt-2rem overflow-hidden">
                                     
-                                    <img
+                                    <Image
                                         src={
                                             index === 0
                                               ? 'http://localhost:1337/uploads/project1_9eb0419414.png'

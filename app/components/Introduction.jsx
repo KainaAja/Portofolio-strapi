@@ -48,7 +48,7 @@ const  Introduction = () => {
           {/* Image column on the left */}
           <div className="col-span-4 place-self-center lg:mt-0">
             <div className="w-[370px] xl:w-[400px] h-[370px] xl:h-[400px] relative">
-              <img
+              <Image
                 src="http://localhost:1337/uploads/profile_6ff09b7741.png"
                 alt="profile"
                 className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
