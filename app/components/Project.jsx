@@ -12,7 +12,7 @@ const Project = () => {
   
     useEffect(() => {
       axios
-        .get("http://127.0.0.1:1337/api/projects")
+        .get("http://127.0.0.1:1337/api/projects?populate=*")
         .then(response => {
           setProject(response.data.data);
         })

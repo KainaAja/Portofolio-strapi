@@ -10,7 +10,7 @@ const  Introduction = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:1337/api/introduction")
+      .get("http://127.0.0.1:1337/api/introduction?populate=*")
       .then(response => {
         setIntroduction(response.data.data.attributes);
       })
